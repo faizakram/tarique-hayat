@@ -36,21 +36,22 @@ export default function About() {
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-900">My Journey</h2>
               <p className="text-lg text-slate-800 mb-4">
-                I'm Tariq Hyatt, a Full Stack Developer with 4 years of professional experience 
-                in software engineering. My journey in technology began with a passion for 
-                problem-solving and has evolved into a career focused on building scalable, 
-                user-centric applications.
+                I'm Tarique Hayat, a Java Backend Developer with 4 years of professional experience 
+                specializing in enterprise application development. My expertise centers on building robust, 
+                scalable backend systems using Java, Spring Boot, and related technologies, complemented by 
+                full-stack capabilities in modern frontend frameworks.
               </p>
               <p className="text-lg text-slate-800 mb-4">
-                Throughout my career, I've worked on diverse projects ranging from e-commerce 
-                platforms to enterprise SaaS applications. I specialize in modern web technologies 
-                and cloud infrastructure, with a strong focus on creating efficient, maintainable, 
-                and performant solutions.
+                Throughout my career, I've architected and developed enterprise-grade backend services, 
+                microservices architectures, and RESTful APIs. My core strengths include Java ecosystem 
+                technologies (Spring Boot, Hibernate, JPA), database design with MySQL, PostgreSQL, and Oracle, 
+                and implementing comprehensive testing strategies using JUnit and Mockito. On the frontend, 
+                I work with Angular and React to deliver complete solutions.
               </p>
               <p className="text-lg text-slate-800">
-                I'm committed to continuous learning and staying updated with the latest industry 
-                trends. My approach combines technical expertise with a deep understanding of 
-                business requirements to deliver solutions that truly make a difference.
+                I'm committed to writing clean, maintainable code following best practices and design patterns. 
+                My approach emphasizes test-driven development, performance optimization, and delivering 
+                solutions that meet both technical requirements and business objectives.
               </p>
             </motion.div>
 
@@ -68,13 +69,14 @@ export default function About() {
                   <div className="flex items-start">
                     <Briefcase className="h-8 w-8 text-blue-600 mt-1 mr-4" />
                     <div>
-                      <h3 className="text-2xl font-bold mb-2 text-slate-900">Senior Full Stack Developer</h3>
+                      <h3 className="text-2xl font-bold mb-2 text-slate-900">Senior Java Backend Developer</h3>
                       <p className="text-slate-600 mb-2">Tech Solutions Inc. • 2022 - Present</p>
                       <ul className="list-disc list-inside space-y-2 text-slate-800">
-                        <li>Led development of microservices architecture serving 1M+ users</li>
-                        <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
-                        <li>Architected cloud-native solutions on AWS and Azure</li>
-                        <li>Mentored junior developers and conducted code reviews</li>
+                        <li>Developed enterprise microservices using Java Spring Boot serving 1M+ users</li>
+                        <li>Implemented RESTful APIs and integrated messaging systems with Kafka and RabbitMQ</li>
+                        <li>Designed and optimized database schemas for MySQL, PostgreSQL, and Oracle</li>
+                        <li>Achieved 90%+ code coverage using JUnit and Mockito test frameworks</li>
+                        <li>Led backend architecture decisions and mentored junior developers</li>
                       </ul>
                     </div>
                   </div>

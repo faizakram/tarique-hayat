@@ -4,24 +4,25 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tariq Hyatt - Full Stack Developer & Cloud Expert",
-  description: "Portfolio of Tariq Hyatt, a Full Stack Developer with 4 years of experience specializing in modern web technologies and cloud services. Expertise in React, Next.js, Node.js, AWS, Azure, and Google Cloud.",
-  keywords: ["Full Stack Developer", "Software Engineer", "Cloud Computing", "AWS", "Azure", "React", "Next.js", "Node.js", "Tariq Hyatt"],
-  authors: [{ name: "Tariq Hyatt" }],
+  title: "Tarique Hayat - Java Backend Developer & Full Stack Engineer",
+  description: "Portfolio of Tarique Hayat, a Java Backend Developer with 4 years of experience specializing in Spring Boot, Hibernate, microservices, and enterprise applications. Also proficient in Angular, React, and modern web technologies.",
+  keywords: ["Java Developer", "Spring Boot", "Backend Developer", "Full Stack Engineer", "Hibernate", "JPA", "Microservices", "Angular", "React", "Tarique Hayat"],
+  authors: [{ name: "Tarique Hayat" }],
   openGraph: {
-    title: "Tariq Hyatt - Full Stack Developer & Cloud Expert",
-    description: "Portfolio of Tariq Hyatt, a Full Stack Developer with 4 years of experience",
+    title: "Tarique Hayat - Java Backend Developer & Full Stack Engineer",
+    description: "Portfolio of Tarique Hayat, a Java Backend Developer with 4 years of experience specializing in Spring Boot and enterprise applications",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tariq Hyatt - Full Stack Developer",
-    description: "Portfolio of Tariq Hyatt, a Full Stack Developer with 4 years of experience",
+    title: "Tarique Hayat - Java Backend Developer",
+    description: "Portfolio of Tarique Hayat, a Java Backend Developer with 4 years of experience in Spring Boot and enterprise applications",
   },
   robots: {
     index: true,
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+        <LoadingScreen />
         <ScrollProgress />
         <Header />
         <main className="min-h-screen">{children}</main>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter, Heart, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -110,16 +110,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-slate-400 text-sm text-center md:text-left">
+          <div className="flex justify-center items-center">
+            <p className="text-slate-400 text-sm text-center">
               © {new Date().getFullYear()} Tarique Hayat. All rights reserved.
             </p>
-            <motion.p
-              className="text-slate-400 text-sm flex items-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              Made with <Heart className="h-4 w-4 mx-1 text-red-500 fill-red-500 animate-pulse" /> using Next.js
-            </motion.p>
           </div>
         </div>
       </div>
