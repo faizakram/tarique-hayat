@@ -26,7 +26,8 @@ export default function About() {
       {/* Main Content */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            {/* Profile Section with Photo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +35,40 @@ export default function About() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-8 mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-900">My Journey</h2>
+              <div className="grid md:grid-cols-3 gap-8 items-start">
+                {/* Professional Photo */}
+                <div className="md:col-span-1">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="relative"
+                  >
+                    <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-purple-100 shadow-xl">
+                      <img
+                        src="/profile.jpg"
+                        alt="Tarique Hayat - Java Backend Developer"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to gradient with initials if image not found
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-600">
+                              <span class="text-6xl font-bold text-white">TH</span>
+                            </div>
+                          `;
+                        }}
+                      />
+                    </div>
+                    {/* Decorative border */}
+                    <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl -z-10 blur-sm opacity-50"></div>
+                  </motion.div>
+                </div>
+
+                {/* Journey Content */}
+                <div className="md:col-span-2">
+                  <h2 className="text-3xl font-bold mb-6 text-slate-900">My Journey</h2>
               <p className="text-lg text-slate-800 mb-4">
                 I'm Tarique Hayat, a Java Backend Developer with 4 years of professional experience 
                 specializing in enterprise application development. My expertise centers on building robust, 
@@ -53,6 +87,8 @@ export default function About() {
                 My approach emphasizes test-driven development, performance optimization, and delivering 
                 solutions that meet both technical requirements and business objectives.
               </p>
+                </div>
+              </div>
             </motion.div>
 
             {/* Experience Timeline */}

@@ -99,7 +99,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-slate-900">Location</h3>
-                    <p className="text-slate-700">Pinic Garden, Kolkata, India</p>
+                    <p className="text-slate-700">Picnic Garden, Kolkata 700039</p>
                   </div>
                 </div>
               </div>
