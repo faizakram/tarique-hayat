@@ -9,7 +9,7 @@ export default function Footer() {
     { icon: Github, href: "https://github.com/tariquehayat", label: "GitHub", color: "hover:text-slate-900" },
     { icon: Linkedin, href: "https://linkedin.com/in/tariquehayat", label: "LinkedIn", color: "hover:text-blue-600" },
     { icon: Twitter, href: "https://twitter.com/tariquehayat", label: "Twitter", color: "hover:text-sky-500" },
-    { icon: Mail, href: "mailto:tarique@example.com", label: "Email", color: "hover:text-red-500" },
+    { icon: Mail, href: "mailto:hayattarique3@gmail.com", label: "Email", color: "hover:text-red-500" },
   ];
 
   const footerLinks = [
@@ -97,8 +97,8 @@ export default function Footer() {
             <div className="space-y-3 text-slate-400">
               <p className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-0.5 text-cyan-400 flex-shrink-0" />
-                <a href="mailto:tarique@example.com" className="hover:text-cyan-400 transition-colors">
-                  tarique@example.com
+                <a href="mailto:hayattarique3@gmail.com" className="hover:text-cyan-400 transition-colors">
+                  hayattarique3@gmail.com
                 </a>
               </p>
               <p className="text-sm leading-relaxed">
