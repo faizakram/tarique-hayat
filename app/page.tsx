@@ -39,13 +39,13 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
         <AnimatedBackground />
         
         {/* Decorative elements */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djRoLTJ2LTRoLTR2LTJoNHYtNGgydjRoNHYyaC00em0wLTMwVjBoLTJ2NGgtNHYyaDR2NGgyVjZoNHY0aC00ek02IDM0djRINHYtNEgwdi0yaDR2LTRoMnY0aDR2MmgtNHptMC0zMFYwSDR2NEgwdjJoNHY0aDJWNmg0VjR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -53,7 +53,7 @@ export default function Home() {
             className="max-w-5xl mx-auto text-center"
           >
             {/* Badge */}
-            <motion.div variants={itemVariants} className="mb-8">
+            <motion.div variants={itemVariants} className="mb-6">
               <motion.div
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full shadow-lg"
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 60px rgba(255,255,255,0.2)" }}
@@ -67,7 +67,7 @@ export default function Home() {
 
             {/* Main Heading */}
             <motion.div variants={itemVariants}>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-4 leading-tight">
                 <span className="block text-white mb-2">Hi, I'm</span>
                 <span className="relative inline-block">
                   <span className="relative z-10 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
@@ -92,25 +92,25 @@ export default function Home() {
             {/* Subtitle */}
             <motion.h2 
               variants={itemVariants} 
-              className="text-2xl sm:text-3xl md:text-4xl mb-6 font-bold bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent"
             >
-              Full Stack Developer & Cloud Architect
+              Java Backend Developer & Full Stack Engineer
             </motion.h2>
 
             {/* Description */}
             <motion.p 
               variants={itemVariants} 
-              className="text-lg sm:text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed font-light"
+              className="text-lg sm:text-xl md:text-2xl mb-7 text-blue-100 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Crafting scalable web applications and cloud-native solutions with 
-              <span className="font-semibold text-white"> 4 years of expertise</span>. 
-              Specialized in modern frameworks, microservices, and multi-cloud deployments.
+              Building enterprise-grade backend systems with Java and Spring Boot, coupled with modern frontend technologies. 
+              <span className="font-semibold text-white"> 4 years of expertise</span> in scalable microservices, 
+              RESTful APIs, and full-stack development.
             </motion.p>
 
             {/* Stats */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto mb-12"
+              className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto mb-8"
             >
               {[
                 { number: "4+", label: "Years Experience" },
@@ -125,7 +125,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 + index * 0.1 }}
                 >
-                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1">{stat.number}</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-xs sm:text-sm text-blue-200">{stat.label}</div>
                 </motion.div>
               ))}
@@ -134,7 +134,7 @@ export default function Home() {
             {/* CTAs */}
             <motion.div 
               variants={itemVariants} 
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-3 justify-center items-center"
             >
               <motion.div 
                 whileHover={{ scale: 1.05, y: -2 }} 
@@ -174,7 +174,7 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -210,33 +210,33 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Code,
-                title: "Frontend Development",
-                desc: "Building responsive, performant UIs with React, Next.js, and modern CSS frameworks",
-                color: "from-blue-500 to-cyan-500",
-                iconBg: "bg-blue-50",
-                iconColor: "text-blue-600",
-              },
-              {
                 icon: Database,
                 title: "Backend Engineering",
-                desc: "Scalable APIs and microservices using Node.js, NestJS, Python, and Express",
+                desc: "Enterprise Java applications with Spring Boot, Hibernate, JPA, and microservices architecture",
                 color: "from-purple-500 to-pink-500",
                 iconBg: "bg-purple-50",
                 iconColor: "text-purple-600",
               },
               {
+                icon: Code,
+                title: "Frontend Development",
+                desc: "Modern, responsive interfaces with Angular, React, TypeScript, and contemporary UI frameworks",
+                color: "from-blue-500 to-cyan-500",
+                iconBg: "bg-blue-50",
+                iconColor: "text-blue-600",
+              },
+              {
                 icon: Cloud,
-                title: "Cloud Architecture",
-                desc: "Multi-cloud deployments on AWS, Azure, and GCP with infrastructure as code",
+                title: "Cloud & DevOps",
+                desc: "Deployment and orchestration on AWS, Azure with Docker, Kubernetes, and CI/CD automation",
                 color: "from-green-500 to-emerald-500",
                 iconBg: "bg-green-50",
                 iconColor: "text-green-600",
               },
               {
                 icon: Globe,
-                title: "DevOps & CI/CD",
-                desc: "Automated pipelines, containerization with Docker, and orchestration with Kubernetes",
+                title: "Testing & Quality",
+                desc: "TDD with JUnit, Mockito, integration testing, and ensuring code quality with best practices",
                 color: "from-orange-500 to-red-500",
                 iconBg: "bg-orange-50",
                 iconColor: "text-orange-600",
@@ -346,10 +346,10 @@ export default function Home() {
                 
                 <div className="space-y-6">
                   {[
-                    { category: "Frontend", techs: ["React", "Next.js", "TypeScript", "Tailwind"] },
-                    { category: "Backend", techs: ["Node.js", "NestJS", "Express", "Python"] },
-                    { category: "Database", techs: ["MongoDB", "PostgreSQL", "Redis", "MySQL"] },
-                    { category: "Cloud", techs: ["AWS", "Azure", "GCP", "Docker"] },
+                    { category: "Backend", techs: ["Java", "Spring Boot", "Hibernate", "JPA"] },
+                    { category: "Frontend", techs: ["Angular", "TypeScript", "React", "Next.js"] },
+                    { category: "Database", techs: ["MySQL", "PostgreSQL", "Oracle", "MongoDB"] },
+                    { category: "Testing", techs: ["JUnit", "Mockito", "Spring Test", "TDD"] },
                   ].map((stack, index) => (
                     <motion.div
                       key={stack.category}

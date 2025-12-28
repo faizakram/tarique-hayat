@@ -1,4 +1,4 @@
-# Tariq Hyatt - Portfolio Website
+# Tarique Hayat - Portfolio Website
 
 A modern, SEO-optimized portfolio website built with Next.js 16.1, TypeScript, and Tailwind CSS.
 
@@ -138,4 +138,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-Built with ❤️ by Tariq Hyatt
+Built with ❤️ by Tarique Hayat

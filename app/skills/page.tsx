@@ -9,15 +9,17 @@ const skillCategories = [
     icon: Code2,
     color: "blue",
     skills: [
-      { name: "React.js", level: 95 },
-      { name: "Next.js", level: 90 },
-      { name: "TypeScript", level: 90 },
-      { name: "JavaScript (ES6+)", level: 95 },
-      { name: "HTML5 & CSS3", level: 95 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "Material-UI", level: 85 },
-      { name: "Redux & Context API", level: 85 },
-      { name: "Vue.js", level: 75 },
+      "Angular",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "React.js",
+      "Next.js",
+      "HTML5 & CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Material-UI",
+      "RxJS",
+      "Responsive Design",
     ]
   },
   {
@@ -25,30 +27,35 @@ const skillCategories = [
     icon: Server,
     color: "purple",
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Express.js", level: 90 },
-      { name: "NestJS", level: 85 },
-      { name: "Python", level: 80 },
-      { name: "Django", level: 75 },
-      { name: "RESTful APIs", level: 95 },
-      { name: "GraphQL", level: 85 },
-      { name: "WebSockets", level: 80 },
-      { name: "Microservices", level: 85 },
+      "Java",
+      "Spring Boot",
+      "Spring Framework",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate ORM",
+      "JPA",
+      "Maven/Gradle",
+      "RESTful APIs",
+      "Microservices Architecture",
+      "Apache Kafka",
+      "RabbitMQ",
     ]
   },
   {
-    title: "Database Technologies",
+    title: "Database & ORM",
     icon: Database,
     color: "green",
     skills: [
-      { name: "MongoDB", level: 90 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "MySQL", level: 85 },
-      { name: "Redis", level: 80 },
-      { name: "Firebase", level: 80 },
-      { name: "Elasticsearch", level: 75 },
-      { name: "DynamoDB", level: 75 },
-      { name: "Prisma ORM", level: 85 },
+      "Hibernate ORM",
+      "JPA (Java Persistence API)",
+      "Spring Data JPA",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle Database",
+      "MongoDB",
+      "Redis",
+      "JDBC",
+      "Query Optimization",
     ]
   },
   {
@@ -56,14 +63,16 @@ const skillCategories = [
     icon: Cloud,
     color: "orange",
     skills: [
-      { name: "AWS (EC2, S3, Lambda, RDS)", level: 90 },
-      { name: "Azure (App Service, Functions)", level: 85 },
-      { name: "Google Cloud Platform", level: 80 },
-      { name: "AWS CloudFormation", level: 75 },
-      { name: "Azure DevOps", level: 80 },
-      { name: "Serverless Framework", level: 85 },
-      { name: "Cloud Architecture", level: 85 },
-      { name: "CDN & Edge Computing", level: 80 },
+      "AWS EC2",
+      "AWS S3",
+      "AWS Lambda",
+      "AWS RDS",
+      "Azure",
+      "Google Cloud",
+      "CloudFormation",
+      "Terraform",
+      "Cloud Architecture",
+      "Serverless",
     ]
   },
   {
@@ -71,29 +80,33 @@ const skillCategories = [
     icon: GitBranch,
     color: "red",
     skills: [
-      { name: "Docker", level: 90 },
-      { name: "Kubernetes", level: 80 },
-      { name: "Git & GitHub", level: 95 },
-      { name: "CI/CD (Jenkins, GitLab CI)", level: 85 },
-      { name: "GitHub Actions", level: 90 },
-      { name: "Nginx", level: 80 },
-      { name: "Linux/Unix", level: 85 },
-      { name: "Monitoring (Prometheus, Grafana)", level: 75 },
+      "Docker",
+      "Kubernetes",
+      "Git & GitHub",
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "Nginx",
+      "Linux/Unix",
+      "Prometheus",
+      "Grafana",
     ]
   },
   {
-    title: "Additional Skills",
+    title: "Testing & Quality",
     icon: Wrench,
     color: "indigo",
     skills: [
-      { name: "Agile/Scrum", level: 90 },
-      { name: "Test-Driven Development", level: 85 },
-      { name: "Jest & Testing Library", level: 85 },
-      { name: "Webpack & Vite", level: 80 },
-      { name: "Socket.io", level: 85 },
-      { name: "OAuth & JWT", level: 90 },
-      { name: "SEO Optimization", level: 80 },
-      { name: "Performance Optimization", level: 85 },
+      "JUnit",
+      "Mockito",
+      "Test-Driven Development",
+      "Integration Testing",
+      "Unit Testing",
+      "Spring Boot Test",
+      "MockMvc",
+      "Code Coverage",
+      "Debugging",
+      "Performance Testing",
     ]
   },
 ];
@@ -151,23 +164,18 @@ export default function Skills() {
                     <h2 className="text-2xl font-bold text-slate-900">{category.title}</h2>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between mb-2">
-                          <span className="font-medium text-slate-800">{skill.name}</span>
-                          <span className="text-slate-700">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2.5">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            transition={{ duration: 1, delay: skillIndex * 0.05 }}
-                            viewport={{ once: true }}
-                            className={`${colors.progress} h-2.5 rounded-full`}
-                          />
-                        </div>
-                      </div>
+                      <motion.div
+                        key={skill}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
+                        viewport={{ once: true }}
+                        className={`${colors.bg} ${colors.text} px-4 py-2 rounded-full font-medium text-sm hover:scale-105 transition-transform cursor-default`}
+                      >
+                        {skill}
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>
