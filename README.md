@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tariq Hyatt - Portfolio Website
 
-## Getting Started
+A modern, SEO-optimized portfolio website built with Next.js 16.1, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
+- **Modern Tech Stack**: Built with Next.js 16.1, React, TypeScript, and Tailwind CSS
+- **Fully Responsive**: Works seamlessly on all devices
+- **SEO Optimized**: Complete with metadata, sitemap, and robots.txt
+- **Multiple Pages**: 
+  - Home - Hero section with highlights
+  - About - Professional journey and experience timeline
+  - Skills - Comprehensive technical skills showcase
+  - Projects - Portfolio of recent work
+  - Contact - Contact form and information
+- **Smooth Animations**: Powered by Framer Motion
+- **Icon Library**: Lucide React icons for modern UI
+- **Type Safety**: Full TypeScript support
+- **Performance**: Optimized with Next.js App Router
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js 16.1
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+### Skills Showcased
+- **Frontend**: React, Next.js, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, Vue.js
+- **Backend**: Node.js, Express.js, NestJS, Python, Django, GraphQL
+- **Databases**: MongoDB, PostgreSQL, MySQL, Redis, Firebase
+- **Cloud**: AWS, Azure, Google Cloud Platform
+- **DevOps**: Docker, Kubernetes, Git, CI/CD, GitHub Actions
+- **Tools**: Jest, Webpack, Vite, Socket.io, OAuth/JWT
+
+## 📦 Installation
+
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/tariqhyatt/portfolio.git
+cd portfolio
+\`\`\`
+
+2. Install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
+
+3. Run the development server:
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`
+tarique-hayat/
+├── app/
+│   ├── about/
+│   │   ├── page.tsx
+│   │   └── layout.tsx
+│   ├── skills/
+│   │   ├── page.tsx
+│   │   └── layout.tsx
+│   ├── projects/
+│   │   ├── page.tsx
+│   │   └── layout.tsx
+│   ├── contact/
+│   │   ├── page.tsx
+│   │   └── layout.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── public/
+├── package.json
+└── README.md
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Update Personal Information
 
-## Deploy on Vercel
+1. **Contact Details**: Edit [app/contact/page.tsx](app/contact/page.tsx)
+2. **Social Links**: Update in [components/Footer.tsx](components/Footer.tsx)
+3. **Experience**: Modify [app/about/page.tsx](app/about/page.tsx)
+4. **Projects**: Add/edit projects in [app/projects/page.tsx](app/projects/page.tsx)
+5. **Skills**: Update skill levels in [app/skills/page.tsx](app/skills/page.tsx)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### SEO Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update the base URL in:
+- [app/sitemap.ts](app/sitemap.ts)
+- [app/layout.tsx](app/layout.tsx)
+
+## 🌐 Deployment
+
+This project can be deployed on:
+- **Vercel** (Recommended)
+- **Netlify**
+- **AWS Amplify**
+- **Azure Static Web Apps**
+- **Google Cloud Run**
+
+### Deploy to Vercel
+
+\`\`\`bash
+npm install -g vercel
+vercel
+\`\`\`
+
+## 📄 License
+
+MIT License - feel free to use this template for your own portfolio!
+
+## 🤝 Contact
+
+- **Email**: tariq.hyatt@example.com
+- **LinkedIn**: [linkedin.com/in/tariqhyatt](https://linkedin.com/in/tariqhyatt)
+- **GitHub**: [github.com/tariqhyatt](https://github.com/tariqhyatt)
+- **Twitter**: [twitter.com/tariqhyatt](https://twitter.com/tariqhyatt)
+
+---
+
+Built with ❤️ by Tariq Hyatt
